@@ -1,4 +1,3 @@
 # This file lists all individuals having contributed content to the repository.
-
-Irbaine Mohamed Amine <irbaine@yahoo.com>
-Redouane Hamdoune <salvador.hamdoune@gmail.com>
+Irbaine Mohamed Amine < irbaine@yahoo.com >
+Redouane Hamdoune < salvador.hamdoune@gmail.com >
