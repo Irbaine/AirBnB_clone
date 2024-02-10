@@ -11,6 +11,7 @@ from models.base_model import BaseModel
 from models.city import City
 from models.amenity import Amenity
 
+
 class HBNBCommand(cmd.Cmd):
 
     prompt = '(hbnb) ' if sys.__stdin__.isatty() else ''
@@ -59,8 +60,8 @@ class HBNBCommand(cmd.Cmd):
                 # if arguments exist beyond _id
                 pline = pline[2].strip()  # pline is now str
                 if pline:
-                    # check for *args or **kwargs
-                    if pline[0] is '{' and pline[-1] is'}'\
+                    # check for
+                    if pline[0] is '{' and pline[-1] is '}'\
                             and type(eval(pline)) is dict:
                         _args = pline
                     else:
@@ -72,7 +73,6 @@ class HBNBCommand(cmd.Cmd):
             pass
         finally:
             return line
-
 
     def help_EOF(self):
         print("Exits the program without formatting\n")
@@ -177,7 +177,6 @@ class HBNBCommand(cmd.Cmd):
 
         new_dict.save()  # save updates to file
 
-
     def postcmd(self, stop, line):
         if not sys.__stdin__.isatty():
             print('(hbnb) ', end='')
@@ -276,7 +275,6 @@ class HBNBCommand(cmd.Cmd):
         except KeyError:
             print("** no instance found **")
 
-
     def do_count(self, args):
         """"""
         count = 0
@@ -291,6 +289,7 @@ class HBNBCommand(cmd.Cmd):
     def help_update(self):
         print("Updates an object with new information")
         print("Usage: update <className> <id> <attName> <attVal>\n")
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
