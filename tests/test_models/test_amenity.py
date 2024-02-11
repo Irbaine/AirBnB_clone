@@ -16,7 +16,7 @@ class test_Amenity(test_basemodel):
         Initialize the test case with the necessary attributes.
         """
         super().__init__(*args, **kwargs)
-        self.name = "hard work"  # Changed the name to "hard work"
+        self.name = "Amenity"
         self.value = Amenity
 
     def test_name2(self):
